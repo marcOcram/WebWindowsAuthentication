@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+  <div>
+    IsPost: @ViewBag.IsPost
+  </div>
+  <div>
+    Hallo @User.Identity.Name (aus der View)
+  </div>
+  <div>
+    Hallo @ViewBag.UserIdentityName (aus dem Controller)
+  </div>
+  <div>
+    Hallo @ViewBag.ContextUserIdentityName (aus dem Controller / HttpContext)
+  </div>
+  <form method="post" action="@Url.Action("Index", "User")">
+    <button type="submit">POST Submit</button>
+  </form>
+</body>
+</html>
